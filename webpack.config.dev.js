@@ -5,6 +5,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // const NODE_MODULES = path.resolve(__dirname, 'node_modules');
 
+var NODE_ENV = process.env.NODE_ENV;
+
 const config = {
   devtool: 'cheap-module-eval-source-map',
   entry: [
@@ -58,7 +60,11 @@ const config = {
     host: AppInfo.host,
   },
   plugins: [
-
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('development'),
+      },
+    }),
     new webpack.NoErrorsPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
