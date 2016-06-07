@@ -3,10 +3,7 @@
  */
 
 import React, { PropTypes } from 'react';
-import Touchable from '../Touchable/Touchable';
 
-
-@Touchable
 class Text extends React.Component {
   static propTypes = {
     /**
@@ -46,7 +43,6 @@ class Text extends React.Component {
   };
 
   state = {
-    ...this.touchableGetInitialState(),
     ...{
       isHighlighted: false,
     },
@@ -70,6 +66,7 @@ class Text extends React.Component {
    * Returns true to allow responder termination
    */
   handleResponderTerminationRequest(): bool {
+    console.log('called handleResponderTerminationRequest');
     // Allow touchable or props.onResponderTerminationRequest to deny
     // the request
     let allowTermination = this.touchableHandleResponderTerminationRequest();
@@ -104,6 +101,7 @@ class Text extends React.Component {
   }
 
   touchableHandleActivePressIn() {
+    console.warn('called touchableHandleActivePressIn ');
     if (this.props.suppressHighlighting || !this.props.onPress) {
       return;
     }
@@ -122,6 +120,7 @@ class Text extends React.Component {
   }
 
   touchableHandlePress() {
+    console.error('touchableHandlePress');
     this.props.onPress && this.props.onPress();
   }
 

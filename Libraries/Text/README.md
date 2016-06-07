@@ -1,13 +1,18 @@
 # Text
+```
+    一个用于显示文本的组件
+```
 
 ## props
 
 
 accessible
 
-numberOfLines number
-
+* numberOfLines number
+```
 Used to truncate the text with an ellipsis after computing the text layout, including line wrapping, such that the total number of lines does not exceed this number.
+用来当文本过长的时候裁剪文本。包括折叠产生的换行在内，总的行数不会超过这个属性的限制。
+```
 
 onLayout function
 
@@ -15,13 +20,19 @@ Invoked on mount and layout changes with
 
 {nativeEvent: {layout: {x, y, width, height}}}
 
-onLongPress function
-
+* onLongPress function
+```
+TODO:
 This function is called on long press.
+```
 
-onPress function
 
+* onPress function
+```
+TODO:
+当文本被点击以后调用此回调函数。
 This function is called on press.
+```
 
 style style
 
