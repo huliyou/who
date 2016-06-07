@@ -3,3 +3,7 @@
 * StyleSheet
 * View
 * Text
+
+
+## 1.0.2-dev
+TextInput
