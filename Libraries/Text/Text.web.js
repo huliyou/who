@@ -136,7 +136,6 @@ class Text extends React.Component {
   }
 
   render() {
-    console.warn(this.state);
     const props = { ...this.props };
     // Text is accessible by default
     if (props.accessible !== false) {

@@ -101,7 +101,7 @@ var States = keyMirror({
   RESPONDER_ACTIVE_PRESS_OUT: null, // Responder, active, out of `PressRect`
   RESPONDER_ACTIVE_LONG_PRESS_IN: null, // Responder, active, in the `PressRect`, after long press threshold
   RESPONDER_ACTIVE_LONG_PRESS_OUT: null, // Responder, active, out of `PressRect`, after long press threshold
-  ERROR: null
+  ERROR: null,
 });
 
 /**
